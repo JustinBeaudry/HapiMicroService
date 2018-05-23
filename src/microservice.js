@@ -84,7 +84,7 @@ module.exports = class MicroService {
     routes = routes.concat(this[_healthCheckRoute]);
     if (!prefix) {
       routes.forEach(route => {
-        server.route(route);
+        this.server.route(route);
       });
       return Promise.resolve();
     }

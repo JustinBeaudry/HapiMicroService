@@ -13,8 +13,6 @@ npm i -S hapi-microservice
 
 ## Setup
 
-**Note that you must provide a CONFIG_PATH environment variable with a configuration object**
-
 Require HapiMicroService and create a new instance. Give the instance a unique name,
 pass in a [Hapi server configuration object](https://hapijs.com/api#server.options), 
 a [Bunyan logger configuration object](https://github.com/trentm/node-bunyan#constructor-api),

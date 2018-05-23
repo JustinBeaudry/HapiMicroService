@@ -8,7 +8,7 @@ to quickly setup and run a Hapi 17 Server.
 
 Install HapiMicroService as a dependency of your project
 ```
-npm i -S HapiMicroService
+npm i -S hapi-microservice
 ```
 
 ## Setup

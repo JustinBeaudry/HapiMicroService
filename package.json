@@ -1,5 +1,5 @@
 {
-  "name": "HapiMicroService",
+  "name": "hapi-microservice",
   "version": "1.0.0",
   "description": "Quickly setup a Hapi 17 Server",
   "main": "index.js",

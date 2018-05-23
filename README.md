@@ -23,7 +23,7 @@ that's passed through to the Logger instance,
 and a health check path that defaults to '/health'.
 ```javascript
   // ...
-  const MicroService = require('hapimicroservice'); 
+  const MicroService = require('hapi-microservice'); 
   const microService = new MicroService('MyAwesomeServer', {
     server: {
       // hapi 17 server config object
@@ -53,7 +53,7 @@ Due to `addRoutes` being an asynchronous function (`server.register` is also asy
 ```javascript
   // ...
  
-  const MicroService = require('hapimicroservice') 
+  const MicroService = require('hapi-microservice') 
   
   const microService = new MicroService('MyAwesomeServer', {
     server: {

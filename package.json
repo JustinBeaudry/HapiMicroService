@@ -1,0 +1,27 @@
+{
+  "name": "HapiMicroService",
+  "version": "1.0.0",
+  "description": "Quickly setup a Hapi 17 Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinBeaudry/HapiMicroService.git"
+  },
+  "author": "Justin Beaudry <beaudry.justin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JustinBeaudry/HapiMicroService/issues"
+  },
+  "homepage": "https://github.com/JustinBeaudry/HapiMicroService#readme",
+  "dependencies": {
+    "boom": "7.x.x",
+    "bunyan": "1.x.x",
+    "event-loop-lag": "1.x.x",
+    "hapi": "17.x.x",
+    "lodash": "4.x.x",
+    "uuid": "3.x.x"
+  }
+}

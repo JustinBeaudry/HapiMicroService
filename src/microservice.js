@@ -1,6 +1,5 @@
 'use strict'
 
-const path = require('path');
 const Boom = require('boom');
 const crypto = require('crypto');
 const createServer = require('./server');
@@ -75,12 +74,20 @@ module.exports = class MicroService {
    */
   addRoutes(routes) {
     let prefix = this[_routePrefix];
-    // make sure prefix has a leading slash
-    if (!(/^\/.+/.test(prefix))) {
-      prefix = `/${prefix}`;
+    if (prefix) {
+      // make sure prefix has a leading slash
+      if (!(/^\/.+/.test(prefix))) {
+        prefix = `/${prefix}`;
+      }
     }
     // add the health check route to the list
     routes = routes.concat(this[_healthCheckRoute]);
+    if (!prefix) {
+      routes.forEach(route => {
+        server.route(route);
+      });
+      return Promise.resolve();
+    }
     return this.server.register({
       name: this.name,
       version: pkg.version,

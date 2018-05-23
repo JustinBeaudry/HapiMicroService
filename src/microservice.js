@@ -10,6 +10,7 @@ const Context = require('./context');
 
 const _routePrefix = Symbol('route_prefix');
 const _port = Symbol('port');
+const _healthCheckRoute = Symbol('health_check_route');
 
 /**
  *
@@ -53,9 +54,8 @@ module.exports = class MicroService {
     this.log = new Logger(log, lagProbeInterval, unresponsiveTimeout);
     this[_routePrefix] = routePrefix;
     this[_port] = server.app.port;
-    this.Boom = Boom;
     // register a health check route
-    this._healthCheckRoute = {
+    this[_healthCheckRoute] = {
       method: 'GET',
       path: healthCheckPath,
       handler: async () => {
@@ -80,7 +80,7 @@ module.exports = class MicroService {
       prefix = `/${prefix}`;
     }
     // add the health check route to the list
-    routes = routes.concat(this._healthCheckRoute);
+    routes = routes.concat(this[_healthCheckRoute]);
     return this.server.register({
       name: this.name,
       version: pkg.version,
@@ -195,6 +195,10 @@ module.exports = class MicroService {
     return {
       'x-request-id': request.headers['x-request-id'] || Context().id
     }
+  }
+
+  static get Boom() {
+    return Boom;
   }
 }
 

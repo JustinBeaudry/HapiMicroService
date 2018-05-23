@@ -1,6 +1,8 @@
 HapiMicroService
 ============
 
+[![npm version](https://badge.fury.io/js/hapi-microservice.svg)](https://badge.fury.io/js/hapi-microservice)
+
 A micro service utility class that encapsulates all the necessary logic 
 to quickly setup and run a Hapi 17 Server.
 

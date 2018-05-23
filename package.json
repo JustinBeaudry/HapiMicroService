@@ -20,7 +20,7 @@
     "boom": "7.x.x",
     "bunyan": "1.x.x",
     "event-loop-lag": "1.x.x",
-    "gc-stats": "^1.1.1",
+    "gc-stats": "1.x.x",
     "hapi": "17.x.x",
     "lodash": "4.x.x",
     "uuid": "3.x.x"

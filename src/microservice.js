@@ -52,7 +52,7 @@ module.exports = class MicroService {
     this.server = createServer(server, this.log);
     this.log = new Logger(log, lagProbeInterval, unresponsiveTimeout);
     this[_routePrefix] = routePrefix;
-    this[_port] = server.app.port;
+    this[_port] = server.port;
     // register a health check route
     this[_healthCheckRoute] = {
       method: 'GET',

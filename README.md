@@ -57,9 +57,7 @@ Due to `addRoutes` being an asynchronous function (`server.register` is also asy
   
   const microService = new MicroService('MyAwesomeServer', {
     server: {
-      app: {
-        port: 3000
-      }
+      port: 3000
     },
     routePrefix: '/api'
   });

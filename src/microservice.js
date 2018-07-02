@@ -162,9 +162,8 @@ module.exports = class MicroService {
       return Boom.notFound();
     }
     else {
-      let results = methodOutput(data, responseType);
+      let results = methodOutput(data);
       let response = responseToolkit.response(results.data);
-      response.type(contentType);
       if (cacheControl) {
         response.header('cache-control', cacheControl);
       }

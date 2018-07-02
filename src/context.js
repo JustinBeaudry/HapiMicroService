@@ -16,7 +16,7 @@ module.exports = class Context {
     // check to make sure that log is a bunyan logger before
     if (log && _.isFunction(log.child)) {
       this.log = log.child({
-        request_id: this.id
+        request_id: id
       });
     }
   }

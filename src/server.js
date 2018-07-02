@@ -22,10 +22,6 @@ module.exports = function createHapiServer(userServerConfig, logger) {
           'Authorization',
           'Content-Type',
           'If-None-Match',
-          'x-api-session-token',
-          'x-application-api-key',
-          'x-api-version',
-          'x-session-api-key'
         ],
         origin: [
           '*'

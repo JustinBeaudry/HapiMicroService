@@ -20,7 +20,7 @@ function gctypeToString(gctype) {
   }
 }
 
-class ClGcStatsEmitter extends EventEmitter {
+class GcStatsEmitter extends EventEmitter {
   constructor(gc, pauseTimeMillisThreshold, reclaimedHeapBytesThreshold) {
     super();
 
@@ -96,4 +96,4 @@ if (process.env.GC_STATS_RECLAIMED_HEAP_BYTES_THRESHOLD) {
   }
 }
 
-module.exports = new ClGcStatsEmitter(gc, pauseTimeMillisThreshold, reclaimedHeapBytesThreshold);
+module.exports = new GcStatsEmitter(gc, pauseTimeMillisThreshold, reclaimedHeapBytesThreshold);

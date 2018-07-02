@@ -35,11 +35,11 @@ module.exports = class Logger {
    * @param {Request} request
    */
   logIncomingRequest(request) {
-    var context = new Context(request.headers['x-request-id'], null, this.log);
+    let context = new Context(request.headers['x-request-id'], null, this.log);
 
     request.context = context;
 
-    var data = {
+    let data = {
       request: {
         method: request.method,
         headers: request.headers,
@@ -57,7 +57,7 @@ module.exports = class Logger {
       data.request.remote = request.headers['x-forwarded-for'];
     }
 
-    var message = request.method + ' ' + request.path;
+    let message = request.method + ' ' + request.path;
 
     context.log.trace(data, message);
 
@@ -85,12 +85,10 @@ module.exports = class Logger {
         path: request.path,
         query: request.query,
         url: request.raw.req.url,
-        cc: request.state && request.state.cc,
-        session: request.headers && request.headers['x-session-api-key'],
         time: context.start
       },
       response: {
-        time: now
+        time: Date.now()
         // other fields filled in below.
       },
       duration: context.dt(),

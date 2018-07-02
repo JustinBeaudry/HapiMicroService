@@ -31,7 +31,6 @@ module.exports = class MicroService {
    *     process: String,
    *     level: String
    *   },
-   *   lagProbeInterval: Number,
    *   unresponsiveTimeout: Number,
    *   healthCheckPath: String
    * }} config

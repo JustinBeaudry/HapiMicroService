@@ -1,6 +1,6 @@
 {
   "name": "hapi-microservice",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Quickly setup a Hapi 17 Server",
   "main": "index.js",
   "scripts": {
